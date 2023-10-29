@@ -41,3 +41,4 @@ var admin = {
     name : "Bill Gates"
 }
 console.log(admin.name)
+//added new branch for Lesson_1 in GitHub
