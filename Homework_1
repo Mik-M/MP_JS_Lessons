@@ -32,11 +32,15 @@ var a = undefined;
 var myUndefined2 = a;
 //12) Declare two variables: admin and name. Assign the value "Bill Gates" to the variable name.Copy the value from the variable name to admin.
 //Print the value of the admin variable.
-// Чесно кажучи, я не знаю, як вирішити це завдання. Потрібна допомога, pleaase!
+// Чесно кажучи, я не знаю, як вирішити це завдання, якщо порядок оголошення переміннич саме damin, а лише потім name. Потрібна допомога, pleaase!
 var admin = name;
 var name = "Bill Gates";
 console.log(admin)
-// а можна й так, але мабуть не в цьому завданні
+
+var name = "Bill Gates"; //так було б занадто просто
+var admin = name;
+console.log(admin)
+// а можна й так, але не в цьому завданні
 var admin = {
     name : "Bill Gates"
 }
