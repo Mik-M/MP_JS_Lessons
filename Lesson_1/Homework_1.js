@@ -45,3 +45,4 @@ var admin = {
     name : "Bill Gates"
 }
 console.log(admin.name)
+
