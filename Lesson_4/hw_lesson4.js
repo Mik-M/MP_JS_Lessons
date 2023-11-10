@@ -88,5 +88,3 @@ function pad(){
 const number = 5;
 //const number = "Hi";
 const result2 = pad(number);
-
-
