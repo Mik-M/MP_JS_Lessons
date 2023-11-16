@@ -66,6 +66,7 @@ function countPairedUnpairedNumbers(quantity, min, max) {
   console.log("Відсоток парних до непарних: " + percentagePaired + " % " + percentageUnpaired);
  
   
+  
 
   
 /* Task - 3
@@ -89,3 +90,4 @@ const number = 5;
 //const number = "Hi";
 const result2 = pad(number);
 
+  
