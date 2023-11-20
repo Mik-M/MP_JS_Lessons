@@ -70,8 +70,11 @@ function createRobot() {
       name: "John",
       is: "person"
     };
-  
-    const robot = {...person, is: "robot", batteryEnergy: 50 };
+
+    const robot = {};
+    Object.assign(robot, {...person, is: "robot", batteryEnergy: 50  });
+
+   //const robot = {...person, is: "robot", batteryEnergy: 50 };
     return robot;
   }
   
@@ -114,7 +117,7 @@ var services = {
 - створити метод maxPrice() - який повертає максимальний price
 */
 
-var services = {    //як прописати return, щоб додавав, а не склеював?
+var services = {    //як тут прописати return, щоб додавав, а не склеював?
 	haircut: "60",
 	shaving: "80",
 	hair_wash: "100",
@@ -127,7 +130,8 @@ var services = {    //як прописати return, щоб додавав, а 
 console.log(services.price);
 
 
-const services = {   //як прописати return, щоб додавав, а не склеював?
+
+const services = {   //як тут прописати return, щоб додавав, а не склеював?
     haircut: 60,
 	shaving: 80,
 	hair_wash: 100,
@@ -138,6 +142,8 @@ const services = {   //як прописати return, щоб додавав, а
 };
 
 console.log(services.price)
+
+////////
 
 
 function calculateSum(obj) { // це GPT так порішав
@@ -160,6 +166,31 @@ function calculateSum(obj) { // це GPT так порішав
   
   const result = calculateSum(services);
   console.log(result); 
+
+  //////////////////
+
+  var services = {  // тільки сума, коли умова як str
+    "haircut": "60",
+    "shave": "80",
+    "Washing the head": "100",
+    // More services can be added here
+    price: function() {
+      let totalCost = 0;
+      for (let service in this) {
+        if (typeof this[service] === 'string' && parseInt(this[service])) {
+          totalCost += parseInt(this[service]);
+        }
+      }
+      return totalCost;
+    },
+  };
+
+console.log("The total cost of the services provided is " + services.price());
+
+//Для перебору всіх властивостей об’єкта використовується цикл for..in. Цей цикл відрізняється від вивченого раніше циклу for(;;)
+/* for (let key in objjjjj){
+    console.log(key + ': ' + objjjjj[key]);
+} */
 
 
 // all in one from GPT
